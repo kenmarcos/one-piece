@@ -1,0 +1,109 @@
+body {
+  background-color: #000000;
+  overflow: hidden;
+  font-family: "Rubik", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Secular One", sans-serif;
+}
+
+main {
+  max-width: 1280px;
+  margin: 0 auto;
+  position: relative;
+}
+
+main::after {
+  content: "";
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(0deg, #000 20%, rgba(0, 0, 0, 0) 65%) no-repeat;
+}
+
+.character {
+  height: 100vh;
+  width: 100%;
+  display: none;
+}
+
+.character--selected {
+  display: block;
+}
+
+.character__image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.character__info {
+  color: #ffffff;
+  padding: 0 16px;
+  position: relative;
+  top: -48px;
+  z-index: 1;
+}
+
+.character__info .logo {
+  background-image: url("../images/one-piece-logo.png");
+  background-size: cover;
+  display: inline-block;
+  width: 170px;
+  height: 75px;
+}
+
+.character__name {
+  margin-top: 28px;
+  font-size: 32px;
+}
+
+.character__description {
+  margin-top: 24px;
+  line-height: 24px;
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  align-items: end;
+  z-index: 1;
+  padding: 16px 0;
+}
+
+.menu__button {
+  width: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  background-color: #000000;
+  border: 1px solid #d60000;
+  transition: transform 0.3s;
+}
+
+.menu__button:hover:not(.menu__button--selected) {
+  transform: scale(1.1);
+}
+
+.menu__button--selected {
+  transform: scale(1.2);
+  box-shadow: 0 0 10px #d9d9d9;
+}
+
+.menu__button__image {
+  width: 100%;
+}

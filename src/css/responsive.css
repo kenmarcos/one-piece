@@ -1,0 +1,51 @@
+@media (min-width: 425px) {
+  .character__image {
+    height: 85%;
+  }
+
+  .character__info {
+    position: absolute;
+    top: 50%;
+    max-width: 560px;
+  }
+}
+
+@media (min-width: 768px) {
+  main::after {
+    background: linear-gradient(-233deg, #000 40%, rgba(0, 0, 0, 0) 65%)
+      no-repeat;
+    width: 90%;
+    position: absolute;
+  }
+
+  .character__image {
+    height: 100%;
+  }
+
+  .character__info {
+    height: 100%;
+    top: 0;
+    left: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 400px;
+  }
+
+  .character__name {
+    font-size: 40px;
+  }
+
+  .menu {
+    flex-direction: column;
+    width: 10%;
+    right: 0;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.65);
+  }
+
+  .menu__button {
+    border: none;
+    width: 65px;
+  }
+}
